@@ -1,16 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { useOutsideClick } from '../../hook/useOutsideClick';
-import { keyPress } from '../../utils/keyPress';
-
-interface ModalProps {
-  isOpen: boolean;
-  message: string;
-  onConfirm: (() => void) | null;
-  onCancel: (() => void) | null;
-  enableOutsideClick?: boolean;
-  enableKeyboardShortcuts?: boolean;
-  showCancelButton?: boolean;
-}
+import { useOutsideClick } from '../hooks/useOutsideClick';
+import { keyPress } from '../utils/keyPress';
+import { ModalProps } from '../types';
 
 function Modal({ 
   isOpen, 
@@ -113,6 +104,6 @@ function Modal({
       </div>
     </div>
   );
-};
+}
 
 export default Modal;

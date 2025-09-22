@@ -1,15 +1,22 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
+node_modules
+**/node_modules
+.pnp
 .pnp.js
 
 # testing
-/coverage
+coverage
+**/coverage
 
-# production
-/build
+# production & build outputs
+dist
+**/dist
+build
+**/build
+packages/*/dist
+apps/*/build
 
 # misc
 .DS_Store
@@ -18,6 +25,19 @@
 .env.test.local
 .env.production.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# cache
+.cache
+.npm
+.eslintcache

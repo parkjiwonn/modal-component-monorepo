@@ -18,9 +18,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@my-app/modal": ["packages/modal/src"],
+      "@my-app/web": ["apps/web/src"]
+    }
   },
   "include": [
-    "src"
+    "packages/*/src",
+    "apps/*/src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
